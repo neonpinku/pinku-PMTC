@@ -105,14 +105,13 @@ $.ajax({
     url: "csv/teams.csv",
     async: false,
     success: function (csvd) {
-        var items = $.csv.toObjects(csvd);
-        var jsonobject = JSON.stringify(items);
-        alert(jsonobject);
+        data = $.csv.toArrays(csvd);
     },
     dataType: "text",
     complete: function () {
         // call a function on complete 
-		console.log(JSON.stringify(d));
+
+		console.log(JSON.stringify(data));
 
     for (i in d) {
         TEAMS[d[i]["INITIALS"]] = d[i];

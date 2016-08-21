@@ -102,7 +102,7 @@ var TEAMS = {};
 //    {feed: "https://docs.google.com/spreadsheet/pub?key=0AneWTc0o_1bpdEVVczlDckt2aXpmX0tRUU01eUZMX3c&single=true&gid=8&output=csv"}).done(function(d) {
 //$.getJSON("https://docs.google.com/spreadsheets/d/1Fy4QRab0v4zStSal7zVs1R2JIjnAZO5otcUr-luj1HQ/pub?single=true&gid=8&alt=json").done(function(d) {
 $.ajax({
-    url: "csv/teams.csv",
+    url: "../csv/teams.csv",
     async: false,
     success: function (csvd) {
         data = $.csv.toArrays(csvd);

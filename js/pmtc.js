@@ -97,7 +97,6 @@ window.onbeforeunload = function() {
 }
 
 var TEAMS = {};
-
 //$.post("../php/getJSON.php",
 //    {feed: "https://docs.google.com/spreadsheet/pub?key=0AneWTc0o_1bpdEVVczlDckt2aXpmX0tRUU01eUZMX3c&single=true&gid=8&output=csv"}).done(function(d) {
 //$.getJSON("https://docs.google.com/spreadsheets/d/1Fy4QRab0v4zStSal7zVs1R2JIjnAZO5otcUr-luj1HQ/pub?single=true&gid=8&alt=json").done(function(d) {
@@ -107,6 +106,17 @@ $.ajax({
     success: function (csvd) {
 		console.log(csvd);
         csvdata = $.csv.toArray(csvd);
+		/*
+		var teamListArray = d;
+
+        LB.PMTC.teamListObject = {};
+
+        for (i=0;i<teamListArray.length;i++) {
+            LB.PMTC.teamListObject[teamListArray[i].INITIALS] = teamListArray[i];
+        }
+
+        console.log(LB.PMTC.teamListObject);
+		*/
     },
     dataType: "text",
     complete: function () {
@@ -217,8 +227,6 @@ $.ajax({
 	eventInfos["worlds"]["name"] = "Worlds "+year;
 	eventInfos["worlds"]["lolesports"] = "http://www.lolesports.com/";
 	eventInfos["worlds"]["esportswikis"] = "http://lol.esportswikis.com/wiki/";
-	}
-});
 
 String.prototype.KWS        =   function() {
     return this.replace(/\s/g, '');
@@ -788,22 +796,6 @@ $(".createPoll").click(function() {
 	});
 });
 
-
-$.post("../php/getJSON.php", 
-    {feed: "https://docs.google.com/spreadsheet/pub?key=0AneWTc0o_1bpdEVVczlDckt2aXpmX0tRUU01eUZMX3c&single=true&gid=8&output=csv"})
-    .done(function(d) {
-
-        var teamListArray = d;
-
-        LB.PMTC.teamListObject = {};
-
-        for (i=0;i<teamListArray.length;i++) {
-            LB.PMTC.teamListObject[teamListArray[i].INITIALS] = teamListArray[i];
-        }
-
-        console.log(LB.PMTC.teamListObject);
-});
-
 $('#panels div.main:first-child .T1').blur(function() {
 	var teamVal = $(this).val();
 	console.log("Blue team has been set for the series result: " + teamVal);
@@ -1055,3 +1047,6 @@ $(".picks input, .bans span > input").blur(function() {
 
 $("#fade").addClass('hidden');
 $("#loading-teams-popup").addClass('hidden');
+
+	}
+});

@@ -966,7 +966,7 @@ body.night *::-webkit-input-placeholder {
 }
 
 body.night #tabList li {
-	color: grey;
+	color: #ffcdd5;
 }
 
 body.night #tabList li.selected {

@@ -218,7 +218,7 @@ $.ajax({
 	eventInfos["worlds"]["lolesports"] = "http://www.lolesports.com/";
 	eventInfos["worlds"]["esportswikis"] = "http://lol.esportswikis.com/wiki/";
 	}
-)};
+});
 
 String.prototype.KWS        =   function() {
     return this.replace(/\s/g, '');

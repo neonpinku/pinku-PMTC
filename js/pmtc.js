@@ -98,9 +98,9 @@ window.onbeforeunload = function() {
 
 var TEAMS = {};
 
-$.post("../php/getJSON.php",
-    {feed: "https://docs.google.com/spreadsheet/pub?key=0AneWTc0o_1bpdEVVczlDckt2aXpmX0tRUU01eUZMX3c&single=true&gid=8&output=csv"}).done(function(d) {
-
+//$.post("../php/getJSON.php",
+//    {feed: "https://docs.google.com/spreadsheet/pub?key=0AneWTc0o_1bpdEVVczlDckt2aXpmX0tRUU01eUZMX3c&single=true&gid=8&output=csv"}).done(function(d) {
+$.getJSON("https://docs.google.com/spreadsheet/pub?key=0AneWTc0o_1bpdEVVczlDckt2aXpmX0tRUU01eUZMX3c&single=true&gid=8&output=csv").done(function(d) {
         console.log(JSON.stringify(d));
 
     for (i in d) {

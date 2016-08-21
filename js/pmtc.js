@@ -100,33 +100,15 @@ var TEAMS = {};
 //$.post("../php/getJSON.php",
 //    {feed: "https://docs.google.com/spreadsheet/pub?key=0AneWTc0o_1bpdEVVczlDckt2aXpmX0tRUU01eUZMX3c&single=true&gid=8&output=csv"}).done(function(d) {
 //$.getJSON("https://docs.google.com/spreadsheets/d/1Fy4QRab0v4zStSal7zVs1R2JIjnAZO5otcUr-luj1HQ/pub?single=true&gid=8&alt=json").done(function(d) {
-$.ajax({
-    url: "/csv/teams.csv",
-    async: false,
-    success: function (csvd) {
-		console.log(csvd);
-        csvdata = $.csv.toArray(csvd);
-		/*
-		var teamListArray = d;
+$.getJSON('/teams.json').done(function(jsondata) {
+	console.log(JSON.stringify(jsondata));
+    // now you can use json
+    $.each(jsondata, function(key, val) {
+        //questions[key] = { Category: val.Category };
+		TEAMS[key["INITIALS"]] = val;
+    });
 
-        LB.PMTC.teamListObject = {};
-
-        for (i=0;i<teamListArray.length;i++) {
-            LB.PMTC.teamListObject[teamListArray[i].INITIALS] = teamListArray[i];
-        }
-
-        console.log(LB.PMTC.teamListObject);
-		*/
-    },
-    dataType: "text",
-    complete: function () {
-        // call a function on complete 
-
-		console.log(JSON.stringify(csvdata));
-
-		for (i in d) {
-			TEAMS[csvdata[i]["INITIALS"]] = csvdata[i];
-		}
+	console.log(TEAMS);
 	
 	var playoffsText = " Playoffs";
 	var promotionsText = "Promotion";

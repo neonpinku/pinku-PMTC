@@ -941,7 +941,7 @@ p.font-size-large {
 /** Night mode **/
 		
 body.night {
-	background-color: #ffdae0;
+	background-color: #ffc1cb;
 	color: #fff;
 }
 
@@ -957,7 +957,7 @@ body.night #container {
 body.night input,
 body.night select,
 body.night textarea {
-	background-color: #FFE1E6;
+	background-color: #ffcdd5;
 	color: #fff;
 }
 

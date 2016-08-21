@@ -984,7 +984,7 @@ body.night #tabList li {
 body.night #tabList li.selected,
 body.night #tabList li:hover {
 	background-color: #eee;
-	color: #ffdae0;
+	color: #ffc1cb;
 }
 
 body.night .teams > div:first-of-type,

@@ -1055,5 +1055,3 @@ $(".picks input, .bans span > input").blur(function() {
 
 $("#fade").addClass('hidden');
 $("#loading-teams-popup").addClass('hidden');
-	
-});

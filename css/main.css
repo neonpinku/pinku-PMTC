@@ -941,7 +941,7 @@ p.font-size-large {
 /** Night mode **/
 		
 body.night {
-	background-color: #343434;
+	background-color: #ffdae0;
 	color: #fff;
 }
 

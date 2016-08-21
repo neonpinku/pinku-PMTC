@@ -114,9 +114,9 @@ $.ajax({
 
 		console.log(JSON.stringify(csvdata));
 
-    for (i in d) {
-        TEAMS[csvdata[i]["INITIALS"]] = csvdata[i];
-    }
+		for (i in d) {
+			TEAMS[csvdata[i]["INITIALS"]] = csvdata[i];
+		}
 	
 	var playoffsText = " Playoffs";
 	var promotionsText = "Promotion";
@@ -217,7 +217,9 @@ $.ajax({
 	eventInfos["worlds"]["name"] = "Worlds "+year;
 	eventInfos["worlds"]["lolesports"] = "http://www.lolesports.com/";
 	eventInfos["worlds"]["esportswikis"] = "http://lol.esportswikis.com/wiki/";
-	
+	}
+)};
+
 String.prototype.KWS        =   function() {
     return this.replace(/\s/g, '');
 };
@@ -1053,7 +1055,5 @@ $(".picks input, .bans span > input").blur(function() {
 
 $("#fade").addClass('hidden');
 $("#loading-teams-popup").addClass('hidden');
-
-	}
 	
 });

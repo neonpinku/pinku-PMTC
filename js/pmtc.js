@@ -104,7 +104,7 @@ $.getJSON('/teams.json').done(function(jsondata) {
 	console.log(JSON.stringify(jsondata));
     // now you can use json
     $.each(jsondata, function(key, val) {
-        //questions[key] = { Category: val.Category };
+        console.log("Key="+key+" Val="+val);
 		TEAMS[key["INITIALS"]] = val;
     });
 

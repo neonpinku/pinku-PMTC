@@ -990,7 +990,7 @@ body.night #tabList li:hover {
 body.night .teams > div:first-of-type,
 body.night .bans .blue-bans,
 body.night .pps > div:first-of-type {
-	background-color: #95B9C7;
+	background-color: #3E3E5C;
 }
 
 body.night .teams > div:last-of-type,

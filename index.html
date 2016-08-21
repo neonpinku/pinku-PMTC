@@ -1,4 +1,143 @@
-<script type="text/javascript" src="js/pmtc.js"></script>
+<!DOCTYPE html>
+	<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+	<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+	<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+	<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+	<!-- -------------------------------- IMPORTANT --------------------------------- -->
+	<!-- DO NOT change the id/class or add new classes to elements where you find *** -->
+	<!-- ---------------------------------------------------------------------------- -->
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<title>LoL Post Match Thread Creator</title>
+			<meta name="description" content="">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			
+			<!-- css -->
+			<link rel="stylesheet" href="../css/normalize.css">
+			<link rel="stylesheet" href="css/main.css">
+			<link rel="stylesheet" href="css/flair.css">
+			
+			<!-- js -->
+			<script src="js/vendor/modernizr-custom.js"></script>
+			<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.1.0.min.js"><\/script>')</script>
+			<script type="text/javascript" src="js/plugins.js"></script>
+			<script type="text/javascript" src="js/jqueryUI.js"></script>
+			<script type="text/javascript" src="js/main.js"></script>
+		</head>
+		
+		<body>
+		
+			<!-- Shadow overlay -->
+			<div id="fade" class="black_overlay hidden"></div>
+			
+			<!-- About Pop up -->
+			<div id="about-popup" class="white_content hidden">
+				<h2>About</h2>
+				<a class="close" href="javascript:void(0)" onclick="closePopup('about-popup')">×</a>
+				<div>
+					<p>Yes this doesn't look pretty. It was created for function, not style.</p>
+					<p>If you have any questions, suggestions or complaints contact:</p>
+					<ul class="centered">
+					<li>/u/cobertor4 (bugs or suggestions to lightbinding)</li>
+					<li>/u/likeahardcore (about our group)</li>
+					</ul>
+					<p>Made by AJ Sadler, updated by Cobertor4.</p>
+				</div>
+			</div>
+			
+			<section id="container">
+			
+			<!--[if lt IE 7]>
+				<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+			<![endif]-->
+			
+<div id="match-history-popup" class="white_content hidden">
+	<h2>Match History Links</h2>
+	<a class="close" href="javascript:void(0)" onclick="closePopup('match-history-popup')">×</a>
+	<ul>
+		<li><a target="_blank" href="http://www.lolesports.com/en_US/eu-lcs/eu_2016_summer/schedule/default">EU LCS</a></li>
+		<li><a target="_blank" href="http://www.lolesports.com/en_US/na-lcs/na_2016_summer/schedule/default">NA LCS</a></li>
+		<li><a target="_blank" href="http://www.lolesports.com/en_US/lck/lck_2016_summer/schedule/default">OGN</a></li>
+		<li>LPL
+			<a target="_blank" href="http://www.lolesports.com/en_US/lpl-china/lpl_2016_summer/schedule/default">1</a> /
+			<a target="_blank" href="http://lol.766.com/match">2</a>
+		</li>
+		<li><a target="_blank" href="http://www.lolesports.com/en_US/lms/lms_2016_summer/schedule/default">LMS</a></li>
+		<li><a target="_blank" href="http://www.lolesports.com/en_US/eu-cs/eucs_2016_summer/schedule/default">EU CS</a></li>
+		<li><a target="_blank" href="http://www.lolesports.com/en_US/na-cs/nacs_2016_summer/schedule/default">NA CS</a></li>
+	</ul>
+</div>
+
+<div id="instructions-popup" class="white_content hidden">
+	<h2>Instructions</h2>
+	<a class="close" href="javascript:void(0)" onclick="closePopup('instructions-popup')">×</a>
+	<div>
+	<p class="bold">Golden rules</p>
+	<ul>
+	<li>Use the most recent pmtc (-lolpmtc).</li>
+	<li>Submit threads as soon as the series end.</li>
+	<li>Copy title from the schedule (-lolschedule).</li>
+	</ul>
+	<p class="bold">Silver rules</p>
+	<ul>
+	<li>Edit changes later (ideally you would just need to fill last game of the series)</li>
+	<li>Have links on the thread before last game ends (if possible)</li>
+	<li>After filling the teams and p/b for each game (fix subs) hit "Create" after "Poll"</li>
+	</ul>
+	<p class="bold">Normal procedure (EU LCS):</p>
+	<ul>
+	<li>Screenshot of the draft of game 1 (once they lock in the champions so you know the pick order) and at the end of the game.</li>
+	<li>Start filling it in after the Game 2 draft.</li>
+	<li>So you should have the title ready + all info the the thread filled up + game 1 stats.</li>
+	<li>You can leave only the champion picks on game 2 and leave everything at 0, but after like ~10 min fill them up and add the match history from lolesports.</li>
+	</ul>
+	<p>If you have any question just ask #league</p>
+	</div>
+</div>
+
+<div id="top-div">
+	<ul class="top-list inline">
+		<!--<li><strong id=createButton>Create</strong></li>-->
+		<!--<li><strong id="editButton">Edit</strong></li>-->
+		<li>
+			<strong id="instructions-btn" onclick="showPopup('instructions-popup')">
+			Instructions
+			</strong>
+		</li>
+		<li>
+		<strong class="about-btn" onclick="showPopup('match-history-popup');">
+			Match History
+		</strong>
+		</li>
+		<li>
+			<strong class="about-btn" onclick="showPopup('about-popup');">
+			About
+			</strong>
+		</li>
+		<li>
+			<strong id="themeButton" onclick="changeTheme();">
+			Switch Theme
+			</strong>
+		</li>
+		<li>
+			<strong>
+				<a target="_blank" href="https://docs.google.com/spreadsheets/d/1679hqMFkHP1fooaQw9jFb1RUNPlxGNvvtvdV5F-W5s0">Schedule</a>
+			</strong>
+		</li>
+		<li>
+			<form method="POST" action="index.php">
+				<input id="btn-logout" type="submit" name="logout" value="" title="Logout"></input>
+			</form>
+		</li>
+	</ul>
+</div>
+
+
+
+			
+			<script type="text/javascript" src="js/pmtc.js"></script>
 <script type="text/javascript" src="js/jquery.inputmask.bundle.min.js"></script>
 <script type="text/javascript" src="js/clipboard.min.js"></script>
 
@@ -8,8 +147,6 @@
 	<p></p>
 	<p>Note: You need to enable javascript to use this site.</p>
 </div>
-
-<?php include_once('menu.php'); ?>
 
 <hr>
 
@@ -88,13 +225,11 @@
 				<div class="inline-block" data-tooltip="Link of lolesports match history" data-tooltip-position="bottom">
 					<input type="url" class="match-history" tabindex="38" value="" placeholder="Match History"> <!-- *** -->
 				</div>
-				<?php if ($validUser) { ?>
 				<!-- standard poll/create poll -->
 				<div class="game-infos-poll" style="display: inline-block;" data-tooltip="Before creating a poll select the teams and remove subs" data-tooltip-position="bottom">
 					<input type="text" placeholder="Poll" class="poll" readonly="readonly"> <!-- *** -->
 					<input type="button" value="Create" class="createPoll"> <!-- *** -->
 				</div>
-				<?php } ?>
 				<!-- LCK: mvp -->
 				<div class="game-infos-lck" style="display: none;">
 					<!--<input type="text" placeholder="MVP" class="game-mvp">-->
@@ -669,8 +804,9 @@ Key: **G**=Gold ; **K**=Kills ; **T**=Towers ; **D**=Dragons ; **B**=Barons
 	<option value='Zilean'>
 	<option value='Zyra'>
 </datalist>
-<?php 
-/*} else {
-echo '<p>How did you get here?</p>';
-}*/
-?>
+		<div id="div-copyright">
+			<p>Copyright &copy; 2016 ajangels</p>
+		</div>
+		</section> <!-- end container -->
+	</body>
+</html>

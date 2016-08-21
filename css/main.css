@@ -962,7 +962,7 @@ body.night textarea {
 }
 
 body.night *::-webkit-input-placeholder {
-	color: #CCCCCC;
+	color: #ff8ea0;
 }
 
 body.night #tabList li {

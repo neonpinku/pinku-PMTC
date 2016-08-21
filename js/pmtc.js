@@ -100,8 +100,15 @@ var TEAMS = {};
 
 //$.post("../php/getJSON.php",
 //    {feed: "https://docs.google.com/spreadsheet/pub?key=0AneWTc0o_1bpdEVVczlDckt2aXpmX0tRUU01eUZMX3c&single=true&gid=8&output=csv"}).done(function(d) {
-$.getJSON("https://docs.google.com/spreadsheets/d/1Fy4QRab0v4zStSal7zVs1R2JIjnAZO5otcUr-luj1HQ/pub?single=true&gid=8&alt=json").done(function(d) {
-        console.log(JSON.stringify(d));
+//$.getJSON("https://docs.google.com/spreadsheets/d/1Fy4QRab0v4zStSal7zVs1R2JIjnAZO5otcUr-luj1HQ/pub?single=true&gid=8&alt=json").done(function(d) {
+csvData = $.ajax({
+	type: "GET",
+	url: "https://docs.google.com/spreadsheet/pub?key=0AneWTc0o_1bpdEVVczlDckt2aXpmX0tRUU01eUZMX3c&single=true&gid=8&output=csv",
+	dataType: "text/csv",
+	success: function (result) {
+	   alert(result);
+	   alert("done!"+ csvData.getAllResponseHeaders())
+		console.log(JSON.stringify(d));
 
     for (i in d) {
         TEAMS[d[i]["INITIALS"]] = d[i];
@@ -1043,4 +1050,6 @@ $(".picks input, .bans span > input").blur(function() {
 $("#fade").addClass('hidden');
 $("#loading-teams-popup").addClass('hidden');
 
+	}
+	
 });

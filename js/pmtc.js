@@ -105,16 +105,16 @@ $.ajax({
     url: "../csv/teams.csv",
     async: false,
     success: function (csvd) {
-        data = $.csv.toArrays(csvd);
+        csvdata = $.csv.toArray(csvd);
     },
     dataType: "text",
     complete: function () {
         // call a function on complete 
 
-		console.log(JSON.stringify(data));
+		console.log(JSON.stringify(csvdata));
 
     for (i in d) {
-        TEAMS[d[i]["INITIALS"]] = d[i];
+        TEAMS[csvdata[i]["INITIALS"]] = csvdata[i];
     }
 	
 	var playoffsText = " Playoffs";

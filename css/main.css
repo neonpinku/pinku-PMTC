@@ -996,7 +996,7 @@ body.night .pps > div:first-of-type {
 body.night .teams > div:last-of-type,
 body.night .bans .red-bans,
 body.night .pps > div:last-of-type {
-	background-color: #523636;
+	background-color: #ff758b;
 }
 
 body.night div.white_content a.close {

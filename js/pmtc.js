@@ -101,10 +101,6 @@ var TEAMS = {};
 //    {feed: "https://docs.google.com/spreadsheet/pub?key=0AneWTc0o_1bpdEVVczlDckt2aXpmX0tRUU01eUZMX3c&single=true&gid=8&output=csv"}).done(function(d) {
 //$.getJSON("https://docs.google.com/spreadsheets/d/1Fy4QRab0v4zStSal7zVs1R2JIjnAZO5otcUr-luj1HQ/pub?single=true&gid=8&alt=json").done(function(d) {
 $.getJSON('/teams.json').done(function(jsondata) {
-	console.log(JSON.stringify(jsondata));
-	console.log("----");
-	console.log(jsondata);
-    // now you can use json
     $.each(jsondata, function(key, val) {
         console.log("Key="+key+" Val="+val+"; val.INITIALS="+val.INITIALS);
 		TEAMS[val.INITIALS] = val;

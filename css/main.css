@@ -981,8 +981,8 @@ body.night #tabList li {
 	color: white;
 }
 
-body.night #tabList li.selected,
-body.night #tabList li:hover {
+body.night #tabList li,
+body.night #tabList li{
 	background-color: #eee;
 	color: #ffc1cb;
 }

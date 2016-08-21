@@ -938,72 +938,72 @@ p.font-size-large {
     z-index: 50;
 }
 
-/** Night mode **/
+/** Pinku mode **/
 		
-body.night {
+body.pinku {
 	background-color: #ffc1cb;
 	color: #fff;
 }
 
-body.night a,
-body.night a:visited {
+body.pinku a,
+body.pinku a:visited {
 	color: #fff;
 }
 
-body.night #container {
+body.pinku #container {
 	border: 2px solid #fff;
 }
 
-body.night input,
-body.night select,
-body.night textarea {
+body.pinku input,
+body.pinku select,
+body.pinku textarea {
 	background-color: #ffcdd5;
 	color: #fff;
 }
 
-body.night *::-webkit-input-placeholder {
+body.pinku *::-webkit-input-placeholder {
 	color: #dbb8bd;
 }
 
-body.night #tabList li {
+body.pinku #tabList li {
 	color: #ffcdd5;
 }
 
-body.night #tabList li.selected {
+body.pinku #tabList li.selected {
 	color: #fff;
 }
 
-body.night .white_content {
+body.pinku .white_content {
 	background-color: #343434;
 }
 
-body.night #tabList li {
+body.pinku #tabList li {
 	color: white;
 }
 
-body.night #tabList li,
-body.night #tabList li{
+body.pinku #tabList li,
+body.pinku #tabList li{
 	background-color: #eee;
 	color: #ffc1cb;
 }
 
-body.night .teams > div:first-of-type,
-body.night .bans .blue-bans,
-body.night .pps > div:first-of-type {
+body.pinku .teams > div:first-of-type,
+body.pinku .bans .blue-bans,
+body.pinku .pps > div:first-of-type {
 	background-color: #3E3E5C;
 }
 
-body.night .teams > div:last-of-type,
-body.night .bans .red-bans,
-body.night .pps > div:last-of-type {
+body.pinku .teams > div:last-of-type,
+body.pinku .bans .red-bans,
+body.pinku .pps > div:last-of-type {
 	background-color: #ff758b;
 }
 
-body.night div.white_content a.close {
+body.pinku div.white_content a.close {
   color: #fff;
 }
 
-body.night #btn-logout {
+body.pinku #btn-logout {
 	background-image: url('../img/logout-white.png');
 }
 
